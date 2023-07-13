@@ -1,0 +1,20 @@
+.search-bar {
+  border-radius: 16px;
+  box-shadow: 0px 1px 3px 1px var(--grayShadow) inset;
+  display: flex;
+  gap: 8px;
+  padding: 12px 8px;
+  min-width: 260px;
+  width: 100%;
+}
+
+.search-bar input {
+  border: none;
+  width: 100%;
+  font-size: 0.7rem;
+  outline: none;
+}
+
+.search-bar:hover {
+  box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.2);
+}
