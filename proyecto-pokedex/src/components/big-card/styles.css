@@ -1,0 +1,213 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    font-style: normal;
+    font-family: 'Poppins', sans-serif;
+   
+}
+
+figure{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    background: var(--pokmon-type-bug, #A7B723);
+
+}
+button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.headerTopContainer{
+    display: flex;
+    padding: 20px 20px 24px 20px;
+    align-items: center;
+    gap: 8px;
+}
+
+.headerTopArrowBack{
+    width: 32px;
+    height: 32px; 
+}
+
+.headerTopName{
+    flex: 1 0 0;
+    color: var(--grayscale-white, #FFF);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px; /* 133.333% */
+}
+
+.headerTopIdNumber{
+    color: var(--grayscale-white, #FFF);
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 16px; /* 133.333% */
+}
+
+.headerBottomContainer{
+    display: flex;
+    padding: 16px 20px;
+    justify-content: space-between;
+    align-items: flex-end; /*VA A TENER EFECTO CUANDO SE MUESTRE LA IMAGEN*/
+    /* flex: 1 0 0;
+    align-self: stretch; NO TIENEN EFECTO PORQUE NO ES UN ITEM FLEX */
+}
+
+.headerBottonChevron {
+    width: 24px;
+    height: 24px;
+}
+.headerBottonImage{
+    display: flex;
+    width: 200px;
+    /* height: 200px; */
+    justify-content: center;
+    align-items: center; 
+    /* position: absolute;
+    left: 76px;
+    bottom: -56px;  */
+}
+.image{
+    
+    width: 200px;
+  
+}
+
+main{
+    display: flex;
+    width: 90%;
+    height: 412px;
+    margin: auto;
+    padding: 56px 20px 20px 20px;
+    flex-direction: column;
+    /* align-items: flex-start; */
+    gap: 16px;
+    /* flex-shrink: 0; */
+    /* align-self: stretch;  */
+    border-radius: 8px;
+    background: var(--grayscale-white, #FFF);
+    box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.25) inset;
+    }
+
+.typeContainer{
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+.type{
+    color: var(--grayscale-white, #FFF);
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 16px; /* 160% */ 
+    padding: 2px 8px;
+    border-radius: 10px;
+    background: var(--pokmon-type-bug, #A7B723);
+}
+    
+.h2{
+    /* align-self: stretch;  */
+    color: var(--pokmon-type-bug, #A7B723);
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px; /* 114.286% */
+}
+
+.aboutOuterContainer{
+    display: flex;
+    justify-content: space-around;
+}
+
+.aboutTop{
+    display: flex;
+    padding: 8px 0px;
+    gap: 8px;
+}
+
+.aboutIcons{
+    width: 16px;
+    height: 16px; 
+}
+
+.aboutData{
+    color: var(--grayscale-dark, #1D1D1D);
+    font-size: 10px;
+    line-height: 16px; /* 160% */
+}
+.aboutBottom{
+    color: var(--grayscale-medium, #666);
+    font-size: 8px;
+    line-height: 12px; /* 150% */
+    display: flex;
+    justify-content: center;
+}
+
+.paragraph{
+    /* justify-content: center;
+    flex: 1 0 0;
+    align-self: stretch;  */
+    color: var(--grayscale-dark, #1D1D1D);
+    text-align: justify;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 16px; /* 160% */ 
+}
+
+.statsContainer{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.statsRow{
+    line-height: 16px;
+    /* NO ESTA TOMANDO LA ALTURA */
+    gap: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.statsRowTitle{
+    width: 27px;
+    color: var(--pokmon-type-bug, #A7B723);
+    text-align: right;
+    font-size: 10px;
+    font-weight: 700;
+    /* line-height: 16px; 160% */
+}
+
+.statsRowDivider{
+    width: 1px;
+    height: 16px;
+    /* align-self: stretch;  */
+    background: var(--grayscale-light, #E0E0E0);
+}
+
+.statsRowValue{
+    width: 19px;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 16px;
+}
+
+.statsRowProgressBar{
+    height: 4px;
+    width: 75%;
+    flex-shrink: 0;
+    border-radius: 4px;
+    opacity: 0.20000000298023224;
+    background: var(--pokmon-type-bug, #A7B723);
+}
+
+
