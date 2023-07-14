@@ -11,7 +11,10 @@
   -webkit-text-size-adjust: 100%;
   --primary: #dc0a2d;
   --grayShadow: #00000040;
+  --grayShadowHover: #00000033;
   --textColor: #1d1d1d;
+  --textSecondary: #666666;
+  --softGray: #efefef;
 }
 
 body {
