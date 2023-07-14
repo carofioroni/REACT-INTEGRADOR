@@ -1,4 +1,4 @@
-.card {
+.smallCard {
   border: 2px solid var(--softGray);
   text-align: center;
   border-radius: 8px;
@@ -11,22 +11,22 @@
   position: relative;
 }
 
-.name {
+.namePoke {
   font-size: 0.8rem;
   font-weight: 400;
   padding: 24px 8px 5px 8px;
   background: var(--softGray);
   color: var(--textSecondary);
-  width: 95%;
-  max-width: 120px;
+  width: 100%;
+  max-width: 130px;
   position: relative;
-  bottom: 37px;
+  bottom: 14px;
   border-radius: 7px;
   z-index: 0;
 }
 
-.image {
-  bottom: 10px;
+.imagePoke {
+  top: 5px;
   margin: 0 auto;
   position: relative;
   padding: 0;
@@ -37,11 +37,11 @@
   z-index: 1;
 }
 
-.order {
+.orderPoke {
   text-align: end;
   font-size: 0.7rem;
   width: 100%;
   padding-right: 25px;
+  padding-top: 3px;
   color: var(--textSecondary);
-
 }
