@@ -5,13 +5,17 @@ import chevronLeft from '../../assets/icons/chevron_left.svg'
 import chevronRight from '../../assets/icons/chevron_right.svg'
 import weightIcon from '../../assets/icons/weight.svg'
 import straightenIcon from '../../assets/icons/straighten.svg'
-import { useNavigate, useParams } from 'react-router-dom'
+import { useLocation, useNavigate, useParams } from 'react-router-dom'
 
 
 function BigCard () {
 
   const [pokemon, setPokemon] = useState();
   const {name} = useParams()
+  // const {state: {nextPokemon}} = useLocation();
+  const location = useLocation();
+  console.log(location)
+
   useEffect(() => { 
     const getPokemon = async () => {
       const httpRequest = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`); 

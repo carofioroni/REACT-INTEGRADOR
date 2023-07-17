@@ -1,9 +1,9 @@
 import { useNavigate } from "react-router-dom";
 import "./styles.css";
-function PokemonCard({ order, name, img, openModal }) {
+function PokemonCard({ order, name, img, nextPokemon }) {
  const navigate = useNavigate()
   const goToDetails = ()=> {
-  navigate(`/pokemon/${name}`)
+  navigate(`/pokemon/${name}`, {state:{nextPokemon}})
  }
   return (
     <div onClick={goToDetails} className="smallCard">

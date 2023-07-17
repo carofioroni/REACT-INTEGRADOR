@@ -36,6 +36,7 @@ function Home() {
           <PokemonCard
             key={pokemon.name}
             order={i + 1}
+            nextPokemon = 'pikachu'
             name={pokemon.name}
             img={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${
               i + 1
