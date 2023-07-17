@@ -9,7 +9,6 @@ body{
     height: 100vh;
     font-style: normal;
     font-family: 'Poppins', sans-serif;
-   
 }
 
 figure{
@@ -54,49 +53,42 @@ button{
 }
 
 .headerBottomContainer{
+    height: 100px;
     display: flex;
-    padding: 16px 20px;
+    padding: 0 20px;
     justify-content: space-between;
-    align-items: flex-end; /*VA A TENER EFECTO CUANDO SE MUESTRE LA IMAGEN*/
-    /* flex: 1 0 0;
-    align-self: stretch; NO TIENEN EFECTO PORQUE NO ES UN ITEM FLEX */
+    align-items: flex-end; 
+    position: relative;
 }
 
 .headerBottonChevron {
     width: 24px;
     height: 24px;
 }
+
 .headerBottonImage{
-    display: flex;
     width: 200px;
-    /* height: 200px; */
-    justify-content: center;
-    align-items: center; 
-    /* position: absolute;
+    position: absolute;
     left: 76px;
-    bottom: -56px;  */
-}
-.image{
+    bottom: -94px; 
     
-    width: 200px;
-  
+}
+
+.bigCardImage{
+    width: 100%;
 }
 
 main{
     display: flex;
-    width: 90%;
-    height: 412px;
+    width: 92%;
     margin: auto;
     padding: 56px 20px 20px 20px;
     flex-direction: column;
-    /* align-items: flex-start; */
     gap: 16px;
-    /* flex-shrink: 0; */
-    /* align-self: stretch;  */
     border-radius: 8px;
     background: var(--grayscale-white, #FFF);
     box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.25) inset;
-    }
+}
 
 .typeContainer{
     display: flex;
@@ -113,9 +105,12 @@ main{
     border-radius: 10px;
     background: var(--pokmon-type-bug, #A7B723);
 }
+.pokemon--type-grass{
+    background: green;
+    
+}
     
 .h2{
-    /* align-self: stretch;  */
     color: var(--pokmon-type-bug, #A7B723);
     text-align: center;
     font-size: 14px;
@@ -153,9 +148,6 @@ main{
 }
 
 .paragraph{
-    /* justify-content: center;
-    flex: 1 0 0;
-    align-self: stretch;  */
     color: var(--grayscale-dark, #1D1D1D);
     text-align: justify;
     font-size: 10px;
@@ -190,7 +182,6 @@ main{
 .statsRowDivider{
     width: 1px;
     height: 16px;
-    /* align-self: stretch;  */
     background: var(--grayscale-light, #E0E0E0);
 }
 

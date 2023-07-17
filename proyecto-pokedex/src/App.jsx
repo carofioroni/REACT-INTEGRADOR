@@ -26,7 +26,7 @@ function App() {
       <Filter />
       {pokemons.map(pokemon => <PokemonCard order={pokemons[pokemon + 1]} name={pokemon.name} img={iconSearch} /> ) }
       
-      <BigCard id={id}/>
+      <BigCard id={id} setId= {setId} pokemons = {pokemons}/>
     </>
   );
 }
