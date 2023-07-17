@@ -5,6 +5,7 @@
   box-shadow: 0px 1px 3px 1px var(--grayShadow) inset;
   border-radius: 50%;
   width: fit-content;
+  background-color: white;
 }
 
 .containerFilter:active,

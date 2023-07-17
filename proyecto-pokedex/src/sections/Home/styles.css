@@ -1,0 +1,31 @@
+.home-container {
+  background-color: var(--primary);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 4px;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 8px;
+  background-color: white;
+  padding: 24px 12px;
+  border-radius: 8px;
+}
+
+.search-and-filter,
+.header {
+  display: flex;
+  gap: 16px;
+  padding: 4px 12px;
+}
+
+.header h1 {
+  color: white;
+}
+
+.header {
+  padding-top: 12px;
+}

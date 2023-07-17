@@ -1,14 +1,15 @@
 .smallCard {
   border: 2px solid var(--softGray);
+  box-shadow: 0px 1px 3px 1px #00000033;
   text-align: center;
   border-radius: 8px;
-  background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 130px;
-  max-height: 130px;
+  width: 120px;
+  height: 120px;
   position: relative;
+  background-color: white;
 }
 
 .namePoke {
@@ -20,7 +21,7 @@
   width: 100%;
   max-width: 130px;
   position: relative;
-  bottom: 14px;
+  bottom: 23px;
   border-radius: 7px;
   z-index: 0;
 }
@@ -32,7 +33,6 @@
   padding: 0;
   width: 72px;
   height: 72px;
-  background-color: white;
   cursor: pointer;
   z-index: 1;
 }
