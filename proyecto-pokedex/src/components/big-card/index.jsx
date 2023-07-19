@@ -49,7 +49,6 @@ function BigCard() {
     }
   };
   
-  
   const dict = {
     hp: "HP",
     attack: "ATK",

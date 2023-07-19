@@ -18,16 +18,18 @@ function Home() {
       );
       const respuesta = await httpRequest.json();
       setPokemons(respuesta.results);
+      setSortedPokemons([...respuesta.results])
     };
 
     getPokemons();
   }, []);
 
 useEffect (()=> {
+  
 setSortedPokemons (typeFilter === "n"? [...pokemons] : sortedPokemons.sort(sortByName))
-}, [typeFilter, pokemons])
+}, [typeFilter])
 
-console.log(sortedPokemons)
+// console.log(sortedPokemons)
   return (
     <div className="home-container">
       <div>
@@ -42,8 +44,10 @@ console.log(sortedPokemons)
       </div>
       <div className="cards-container">
         
-        {sortedPokemons.map((pokemon, i) => (
-          <PokemonCard
+        {sortedPokemons.map((pokemon, i) => {
+          console.log(pokemon)
+          console.log(i)
+          return <PokemonCard
             key={pokemon.name}
             order={i + 1}
             nextPokemon = 'pikachu'
@@ -52,7 +56,7 @@ console.log(sortedPokemons)
               i + 1
             }.png`}
           />
-        ))}
+          })}
       </div>
     </div>
   );
