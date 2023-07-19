@@ -16,7 +16,7 @@ figure{
     width: 100%;
     height: 100vh;
     flex-direction: column;
-    background: var(--pokmon-type-bug, #A7B723);
+    background: var(--type-color);
 
 }
 button{
@@ -43,6 +43,7 @@ button{
     font-size: 24px;
     font-weight: 700;
     line-height: 32px; /* 133.333% */
+    text-transform: capitalize;
 }
 
 .headerTopIdNumber{
@@ -80,7 +81,7 @@ button{
 
 main{
     display: flex;
-    width: 92%;
+    width: 96%;
     margin: auto;
     padding: 56px 20px 20px 20px;
     flex-direction: column;
@@ -103,15 +104,13 @@ main{
     line-height: 16px; /* 160% */ 
     padding: 2px 8px;
     border-radius: 10px;
-    background: var(--pokmon-type-bug, #A7B723);
-}
-.pokemon--type-grass{
-    background: green;
+    background: var(--type-color);
     
 }
+
     
 .h2{
-    color: var(--pokmon-type-bug, #A7B723);
+    color: var(--type-color);
     text-align: center;
     font-size: 14px;
     font-weight: 700;
@@ -128,6 +127,17 @@ main{
     padding: 8px 0px;
     gap: 8px;
 }
+.aboutTopColumn{
+    display: flex;
+    flex-direction: column;
+    padding: 8px 0px;
+    text-transform: capitalize;
+}
+.aboutInnerContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
 .aboutIcons{
     width: 16px;
@@ -138,7 +148,9 @@ main{
     color: var(--grayscale-dark, #1D1D1D);
     font-size: 10px;
     line-height: 16px; /* 160% */
+    
 }
+
 .aboutBottom{
     color: var(--grayscale-medium, #666);
     font-size: 8px;
@@ -172,7 +184,7 @@ main{
 
 .statsRowTitle{
     width: 27px;
-    color: var(--pokmon-type-bug, #A7B723);
+    color: var(--type-color);
     text-align: right;
     font-size: 10px;
     font-weight: 700;
@@ -198,7 +210,7 @@ main{
     flex-shrink: 0;
     border-radius: 4px;
     opacity: 0.20000000298023224;
-    background: var(--pokmon-type-bug, #A7B723);
+    background: var(--type-color);
 }
 
 
