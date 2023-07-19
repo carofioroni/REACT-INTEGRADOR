@@ -26,10 +26,10 @@ function Home() {
 
 useEffect (()=> {
   
-setSortedPokemons (typeFilter === "n"? [...pokemons] : sortedPokemons.sort(sortByName))
+setSortedPokemons (typeFilter === "n"? [...pokemons] : [...sortedPokemons].sort(sortByName))
 }, [typeFilter])
 
-// console.log(sortedPokemons)
+
   return (
     <div className="home-container">
       <div>
@@ -45,8 +45,6 @@ setSortedPokemons (typeFilter === "n"? [...pokemons] : sortedPokemons.sort(sortB
       <div className="cards-container">
         
         {sortedPokemons.map((pokemon, i) => {
-          console.log(pokemon)
-          console.log(i)
           return <PokemonCard
             key={pokemon.name}
             order={i + 1}
