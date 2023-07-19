@@ -7,6 +7,27 @@ import "./styles.css";
 
 function Home() {
   const [pokemons, setPokemons] = useState([]);
+  const [tablePoke, setTablePoke] = useState([]);
+  const [form, setForm] = useState({ namePokemon: "" });
+
+  const handleChange = (e) => {
+    setForm((lastForm) => ({ ...lastForm, namePokemon: e.target.value }));
+    searchPokemon(e.target.value);
+  };
+
+  const searchPokemon = (namePokemon) => {
+    const result = tablePoke.filter((element) => {
+      if (element.name.includes(namePokemon)) {
+        return element;
+      }
+    });
+    setPokemons(result);
+  };
+
+  const resetSearchBar = () => {
+    setForm({ namePokemon: "" });
+    searchPokemon('');
+  };
 
   useEffect(() => {
     const getPokemons = async () => {
@@ -15,6 +36,7 @@ function Home() {
       );
       const respuesta = await httpRequest.json();
       setPokemons(respuesta.results);
+      setTablePoke(respuesta.results);
     };
 
     getPokemons();
@@ -27,22 +49,28 @@ function Home() {
           <h1>Pokédex</h1>
         </div>
         <div className="search-and-filter">
-          <SearchBar />
+          <SearchBar
+            value={form.namePokemon}
+            onChange={handleChange}
+            onClose={resetSearchBar}
+          />
           <Filter />
         </div>
       </div>
       <div className="cards-container">
-        {pokemons.map((pokemon, i) => (
-          <PokemonCard
-            key={pokemon.name}
-            order={i + 1}
-            nextPokemon = 'pikachu'
-            name={pokemon.name}
-            img={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${
-              i + 1
-            }.png`}
-          />
-        ))}
+        {pokemons.map((pokemon, i) => {
+          const url = pokemon.url.split("/");
+          const id = url[6];
+          return (
+            <PokemonCard
+              key={pokemon.name}
+              order={id}
+              nextPokemon="pikachu"
+              name={pokemon.name}
+              img={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`}
+            />
+          );
+        })}
       </div>
     </div>
   );

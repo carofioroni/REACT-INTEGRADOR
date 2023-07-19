@@ -4,15 +4,19 @@
   flex-direction: column;
   gap: 24px;
   padding: 4px;
+  min-height: 100vh;
 }
 
 .cards-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: center;
   gap: 8px;
   background-color: white;
   padding: 24px 12px;
   border-radius: 8px;
+  min-height: 500px;
 }
 
 .search-and-filter,
