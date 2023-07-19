@@ -1,12 +1,15 @@
 import { useState, useEffect } from "react";
 import SearchBar from "../../components/SearchBar";
-import Filter from "../../components/Filter";
+import Filter, {sortByName} from "../../components/Filter";
 import PokemonCard from "../../components/Card";
 import pokeball from "../../assets/icons/pokeball.svg";
 import "./styles.css";
 
 function Home() {
   const [pokemons, setPokemons] = useState([]);
+  const [typeFilter, setTypeFilter] = useState("n");
+  const [sortedPokemons, setSortedPokemons] = useState([])
+
 
   useEffect(() => {
     const getPokemons = async () => {
@@ -19,6 +22,12 @@ function Home() {
 
     getPokemons();
   }, []);
+
+useEffect (()=> {
+setSortedPokemons (typeFilter === "n"? [...pokemons] : sortedPokemons.sort(sortByName))
+}, [typeFilter, pokemons])
+
+console.log(sortedPokemons)
   return (
     <div className="home-container">
       <div>
@@ -28,11 +37,12 @@ function Home() {
         </div>
         <div className="search-and-filter">
           <SearchBar />
-          <Filter />
+          <Filter typeFilter={typeFilter} setTypeFilter={setTypeFilter}/>
         </div>
       </div>
       <div className="cards-container">
-        {pokemons.map((pokemon, i) => (
+        
+        {sortedPokemons.map((pokemon, i) => (
           <PokemonCard
             key={pokemon.name}
             order={i + 1}
