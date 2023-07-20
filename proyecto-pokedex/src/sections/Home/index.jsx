@@ -1,12 +1,35 @@
 import { useState, useEffect } from "react";
 import SearchBar from "../../components/SearchBar";
-import Filter, {sortByName} from "../../components/Filter";
+import Filter, { sortByName } from "../../components/Filter";
 import PokemonCard from "../../components/Card";
 import pokeball from "../../assets/icons/pokeball.svg";
 import "./styles.css";
 
 function Home() {
   const [pokemons, setPokemons] = useState([]);
+  const [tablePoke, setTablePoke] = useState([]);
+  const [form, setForm] = useState({ namePokemon: "" });
+  const [typeFilter, setTypeFilter] = useState("n");
+  const [sortedPokemons, setSortedPokemons] = useState([]);
+
+  const handleChange = (e) => {
+    setForm((lastForm) => ({ ...lastForm, namePokemon: e.target.value }));
+    searchPokemon(e.target.value);
+  };
+
+  const searchPokemon = (namePokemon) => {
+    const result = pokemons.filter((element) => {
+      if (element.name.includes(namePokemon)) {
+        return element;
+      }
+    });
+    setSortedPokemons(result);
+  };
+
+  const resetSearchBar = () => {
+    setForm({ namePokemon: "" });
+    searchPokemon("");
+  };
 
   useEffect(() => {
     const getPokemons = async () => {
@@ -15,17 +38,18 @@ function Home() {
       );
       const respuesta = await httpRequest.json();
       setPokemons(respuesta.results);
-      setTablePoke(respuesta.results);
+      setSortedPokemons([...respuesta.results]);
     };
 
     getPokemons();
   }, []);
 
-useEffect (()=> {
-setSortedPokemons (typeFilter === "n"? [...pokemons] : sortedPokemons.sort(sortByName))
-}, [typeFilter, pokemons])
+  useEffect(() => {
+    setSortedPokemons(
+      typeFilter === "n" ? [...pokemons] : [...sortedPokemons].sort(sortByName)
+    );
+  }, [typeFilter]);
 
-console.log(sortedPokemons)
   return (
     <div className="home-container">
       <div>
@@ -34,22 +58,28 @@ console.log(sortedPokemons)
           <h1>Pokédex</h1>
         </div>
         <div className="search-and-filter">
-          <SearchBar />
-          <Filter />
+          <SearchBar
+            value={form.namePokemon}
+            onChange={handleChange}
+            onClose={resetSearchBar}
+          />
+          <Filter typeFilter={typeFilter} setTypeFilter={setTypeFilter} />
         </div>
       </div>
       <div className="cards-container">
-        {pokemons.map((pokemon, i) => (
-          <PokemonCard
-            key={pokemon.name}
-            order={i + 1}
-            nextPokemon = 'pikachu'
-            name={pokemon.name}
-            img={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${
-              i + 1
-            }.png`}
-          />
-        ))}
+        {sortedPokemons.map((pokemon) => {
+          const url = pokemon.url.split("/");
+          const id = url[6];
+          return (
+            <PokemonCard
+              key={pokemon.name}
+              order={id}
+              nextPokemon="pikachu"
+              name={pokemon.name}
+              img={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`}
+            />
+          );
+        })}
       </div>
     </div>
   );

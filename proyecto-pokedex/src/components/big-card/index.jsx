@@ -51,7 +51,6 @@ function BigCard () {
     }
   };
   
-  
   const dict = {
     hp: "HP",
     attack: "ATK",
@@ -166,56 +165,6 @@ function BigCard () {
                   ></progress>
                 </div>
               ))}
-            {/* <div className="statsRow">
-              <span className="statsRowTitle">ATK</span>
-              <span className="statsRowDivider"></span>
-              <span className="statsRowValue">060</span>
-              <progress
-                className="statsRowProgressBar"
-                max="200"
-                value="60"
-              ></progress>
-            </div>
-            <div className="statsRow">
-              <span className="statsRowTitle">DEF</span>
-              <span className="statsRowDivider"></span>
-              <span className="statsRowValue">060</span>
-              <progress
-                className="statsRowProgressBar"
-                max="200"
-                value="60"
-              ></progress>
-            </div>
-            <div className="statsRow">
-              <span className="statsRowTitle">SATK</span>
-              <span className="statsRowDivider"></span>
-              <span className="statsRowValue">060</span>
-              <progress
-                className="statsRowProgressBar"
-                max="200"
-                value="60"
-              ></progress>
-            </div>
-            <div className="statsRow">
-              <span className="statsRowTitle">SDEF</span>
-              <span className="statsRowDivider"></span>
-              <span className="statsRowValue">060</span>
-              <progress
-                className="statsRowProgressBar"
-                max="200"
-                value="60"
-              ></progress>
-            </div>
-            <div className="statsRow">
-              <span className="statsRowTitle">SPD</span>
-              <span className="statsRowDivider"></span>
-              <span className="statsRowValue">060</span>
-              <progress
-                className="statsRowProgressBar"
-                max="200"
-                value="60"
-              ></progress>
-            </div> */}
           </div>
         </section>
       </main>

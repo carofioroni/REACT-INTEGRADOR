@@ -17,11 +17,11 @@ export const sortByName = (a, b) => {
 
 
 function Filter({ typeFilter, setTypeFilter }) {
-const onClickhandler = ()=> {
+const onClickHandler = ()=> {
   setTypeFilter(typeFilter === "a" ? "n": "a")
 }
   return (
-    <a className="containerFilter" onClick={onClickhandler}>
+    <a className="containerFilter" onClick={onClickHandler}>
       {typeFilter === "a"? (
         <img src={letter} alt="alfabeto icon" />
       ) : (
