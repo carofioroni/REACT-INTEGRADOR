@@ -16,48 +16,94 @@
   --textSecondary: #666666;
   --softGray: #efefef;
 }
-.bug {--type-color: #A7B723;}
+.bug {
+  --type-color: #a7b723;
+}
 
-.dark {--type-color: #75574C;}
+.dark {
+  --type-color: #75574c;
+}
 
-.dragon {--type-color: #7037FF;}
+.dragon {
+  --type-color: #7037ff;
+}
 
-.electric {--type-color: #F9CF30;}
+.electric {
+  --type-color: #f9cf30;
+}
 
-.fairy {--type-color: #E69EAC;}
+.fairy {
+  --type-color: #e69eac;
+}
 
-.fighting {--type-color: #C12239;}
+.fighting {
+  --type-color: #c12239;
+}
 
-.fire {--type-color: #F57D31;}
+.fire {
+  --type-color: #f57d31;
+}
 
-.flying {--type-color: #A891EC;}
+.flying {
+  --type-color: #a891ec;
+}
 
-.ghost {--type-color: #70559B;}
+.ghost {
+  --type-color: #70559b;
+}
 
-.normal {--type-color: #AAA67F;}
+.normal {
+  --type-color: #aaa67f;
+}
 
-.grass {--type-color: #74CB48;}
+.grass {
+  --type-color: #74cb48;
+}
 
-.ground {--type-color: #DEC16B;}
+.ground {
+  --type-color: #dec16b;
+}
 
-.ice {--type-color: #9AD6DF;}
+.ice {
+  --type-color: #9ad6df;
+}
 
-.poison {--type-color: #A43E9E;}
+.poison {
+  --type-color: #a43e9e;
+}
 
-.psychic {--type-color: #FB5584;}
+.psychic {
+  --type-color: #fb5584;
+}
 
-.rock {--type-color: #B69E31;}
+.rock {
+  --type-color: #b69e31;
+}
 
-.steel {--type-color: #B7B9D0;}
+.steel {
+  --type-color: #b7b9d0;
+}
 
-.water {--type-color: #6493EB;}
+.water {
+  --type-color: #6493eb;
+}
 
-.grayscale-medium {--type-color: #666666};
-.grayscale-light{--type-color: #E0E0E0};
-/* .grayscale-{--type-color: #EFEFEF}; */
-.grayscale-white {--type-color: #FFFFFF};
-.grayscale-wireframe {--type-color: #b8b8b8};
-.grayscale-dark {--type-color: #1d1d1d};
+.grayscale-medium {
+  --type-color: #666666;
+}
+.grayscale-light {
+  --type-color: #e0e0e0;
+}
+/* .grayscale-{--type-color: #EFEFEF} */
+.grayscale-white {
+  --type-color: #ffffff;
+}
+.grayscale-wireframe {
+  --type-color: #b8b8b8;
+}
+.grayscale-dark {
+  --type-color: #1d1d1d;
+}
 
 body {
   margin: 0;
@@ -66,5 +112,3 @@ body {
   min-height: 100vh;
   color: var(--textColor);
 }
-
-
